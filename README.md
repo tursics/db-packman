@@ -1,7 +1,14 @@
 # DB TrainMan
 
-The description is cuming soon.
+A more detailed description is cuming soon.
 
-# Copyright
+## Project settings
 
-The code is licensed on MIT license. But the images are not licensed at all. Please use your own images!
+You can test the game online with this [Link](https://tursics.github.io/db-trainman/). 
+Current project status is documented in the [Project board](https://github.com/tursics/db-trainman/projects/1).
+Feel free to contribute your thoughts and code.
+
+## Copyright
+
+The code is licensed with the MIT license.
+But the **images are not licensed** to you. Please use your own images!
