@@ -1,0 +1,35 @@
+/* ----------------------- */
+
+div#background {
+	background: #eee;
+	background-position: center center;
+	background-size: cover;
+	bottom: 0;
+	left: 0;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+html.kleinerICE div#background {
+	background-image: url('../assets/Hintergrund-05.png');
+}
+
+html.idaIC div#background {
+	background-image: url('../assets/Hintergrund-08.jpg');
+	background-position: right center;
+}
+
+html.robbiRegio div#background {
+	background-image: url('../assets/Hintergrund-04.png');
+}
+
+html.benniICBUS div#background {
+	background-image: url('../assets/Hintergrund-09.jpg');
+}
+
+html.nickNachtzug div#background {
+	background-image: url('../assets/Hintergrund-06.jpg');
+}
+
+/* ----------------------- */
