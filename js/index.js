@@ -1,15 +1,24 @@
 /*jslint browser: true*/
-/*global $,document,background,console*/
+/*global Vue,document,background,console*/
 
 //-----------------------------------------------------------------------
 
-$(document).ready(function () {
-	'use strict';
+var app = new Vue({
+	el: '#app',
+	data: {
+		message: 'Hello World.'
+	},
+	created: function () {
+		'use strict';
 
-	document.title = 'DB TrainMan';
-	console.log('hello world');
+		document.title = 'DB TrainMan';
+		console.log('hello world');
 
-	background.init();
+		background.init();
+	},
+	methods: {
+		
+	}
 });
 
 //-----------------------------------------------------------------------

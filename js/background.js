@@ -1,5 +1,5 @@
 /*jslint browser: true*/
-/*global $*/
+/*global */
 
 //-----------------------------------------------------------------------
 
@@ -9,8 +9,6 @@ var background = {
 	init: function () {
 		'use strict';
 
-		this.obj = $('<div />').appendTo('body');
-		this.obj.attr('id', 'background');
 		this.set(0);
 	},
 	set: function (id) {
@@ -34,12 +32,12 @@ var background = {
 			theme = 'nickNachtzug';
 			break;
 		}
-		$('html').removeClass('kleinerICE');
-		$('html').removeClass('idaIC');
-		$('html').removeClass('robbiRegio');
-		$('html').removeClass('benniICBUS');
-		$('html').removeClass('nickNachtzug');
-		$('html').addClass(theme);
+		document.documentElement.classList.remove('kleinerICE');
+		document.documentElement.classList.remove('idaIC');
+		document.documentElement.classList.remove('robbiRegio');
+		document.documentElement.classList.remove('benniICBUS');
+		document.documentElement.classList.remove('nickNachtzug');
+		document.documentElement.classList.add(theme);
 	}
 };
 
