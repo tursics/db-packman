@@ -11,7 +11,7 @@ var app = new Vue({
 	created: function () {
 		'use strict';
 
-		document.title = 'DB TrainMan';
+		document.title = 'DB PacTrain';
 		console.log('hello world');
 
 		background.init();
