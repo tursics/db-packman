@@ -6,32 +6,14 @@
 var background = {
 	obj: null,
 
-	init: function () {
+	init: function (vue) {
 		'use strict';
 
-		this.set(0);
+		vue.theme = 'kleinerICE';
 	},
-	set: function (id) {
+	set: function (vue, theme) {
 		'use strict';
 
-		var theme = 'kleinerICE';
-		switch (id) {
-		case 0:
-			theme = 'kleinerICE';
-			break;
-		case 1:
-			theme = 'idaIC';
-			break;
-		case 2:
-			theme = 'robbiRegio';
-			break;
-		case 3:
-			theme = 'benniICBUS';
-			break;
-		case 4:
-			theme = 'nickNachtzug';
-			break;
-		}
 		document.documentElement.classList.remove('kleinerICE');
 		document.documentElement.classList.remove('idaIC');
 		document.documentElement.classList.remove('robbiRegio');

@@ -6,18 +6,25 @@
 var app = new Vue({
 	el: '#app',
 	data: {
-		message: 'Hello World.'
+		message: 'Hello World.',
+		theme: ''
 	},
 	created: function () {
 		'use strict';
 
 		document.title = 'DB PacTrain';
-		console.log('hello world');
 
-		background.init();
+		background.init(this);
 	},
 	methods: {
 		
+	},
+	watch: {
+		'theme': function (val) {
+			'use strict';
+
+			background.set(this, val);
+		}
 	}
 });
 
