@@ -32,4 +32,13 @@ html.nickNachtzug div#background {
 	background-image: url('../assets/Hintergrund-06.jpg');
 }
 
+.dialog {
+	background: rgba(255,255,255,.5);
+	bottom: 50%;
+	left: 20%;
+	position: absolute;
+	right: 20%;
+	top: 20%;
+}
+
 /* ----------------------- */

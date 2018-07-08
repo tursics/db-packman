@@ -16,6 +16,19 @@
 <body>
 	<div id="app">
 		<div id="background"></div>
+		<div id="dialogMessage" class="dialog" v-show="dialogMessageVisible">
+			<h1>{{dialogMessageHead}}</h1>
+			<div>{{dialogMessageBody}}</div>
+			<button v-on:click="dialogMessageClick">Weiter</button>
+		</div>
+		<div id="dialogChoosePlayer" class="dialog" v-show="dialogChoosePlayerVisible">
+			<h1>{{dialogChoosePlayerHead}}</h1>
+			<div>{{dialogChoosePlayerBody}}</div>
+			<div>
+				<a href=""><span id="chooseKleinerICE"></span></a>
+			</div>
+			<button v-on:click="dialogMessageClick">Weiter</button>
+		</div>
 	</div>
 
 	<script src="js/background.js"></script>
