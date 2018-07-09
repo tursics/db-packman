@@ -1,5 +1,5 @@
 /*jslint browser: true*/
-/*global */
+/*global document*/
 
 //-----------------------------------------------------------------------
 
@@ -8,6 +8,10 @@ var background = {
 
 	init: function (vue) {
 		'use strict';
+
+		vue.$watch('theme', function (val) {
+			background.set(this, val);
+		});
 
 		vue.theme = 'kleinerICE';
 	},
