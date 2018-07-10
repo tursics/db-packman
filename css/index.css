@@ -1,5 +1,47 @@
 /* ----------------------- */
 
+@font-face {
+	font-family: 'DBSansRegular';
+	src: url('../fonts/dbsan03-web.eot');
+	src: url('../fonts/dbsan03-web.woff') format('woff'),
+	url('../fonts/dbsan03-web.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/dbsan03-web.ttf') format('truetype'),
+	url('../fonts/dbsan03-web.svg#DBSansRegular') format('svg');
+}
+@font-face {
+	font-family: 'DBSansBold';
+	src: url('../fonts/dbsan06-web.eot');
+	src: url('../fonts/dbsan06-web.woff') format('woff'),
+	url('../fonts/dbsan06-web.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/dbsan06-web.ttf') format('truetype'),
+	url('../fonts/dbsan06-web.svg#DBSansBold') format('svg');
+}
+@font-face {
+	font-family: 'DBSansCond';
+	src: url('../fonts/dbsan43-web.eot');
+	src: url('../fonts/dbsan43-web.woff') format('woff'),
+	url('../fonts/dbsan43-web.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/dbsan43-web.ttf') format('truetype'),
+	url('../fonts/dbsan43-web.svg#DBSansCond') format('svg');
+}
+@font-face {
+	font-family: 'DBSansCondBold';
+	src: url('../fonts/dbsan46-web.eot');
+	src: url('../fonts/dbsan46-web.woff') format('woff'),
+	url('../fonts/dbsan46-web.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/dbsan46-web.ttf') format('truetype'),
+	url('../fonts/dbsan46-web.svg#DBSansCondBold') format('svg');
+}
+
+/* ----------------------- */
+
+body {
+	font-family: DBSansRegular;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-family: DBSansBold;
+}
+
 div#background {
 	background: #eee;
 	background-position: center center;
