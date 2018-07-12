@@ -10,13 +10,14 @@ var dialog = {
 		'use strict';
 
 		vue.$watch('dialogStep', function (val) {
-			this.dialogMessageVisible = (-1 !== ['hello', 'story'].indexOf(val));
+			this.dialogMessageVisible = (-1 !== ['hello', 'story', 'control'].indexOf(val));
 			this.dialogChoosePlayerVisible = (-1 !== ['chooseFigure'].indexOf(val));
 		});
 
 		vue.dialogStep = 'hello';
-		vue.dialogMessageHead = 'DB PacTrain';
+		vue.dialogMessageHead = 'Strecken-Läufer';
 		vue.dialogMessageBody = 'Helfe dem kleinen ICE und seinen Freunden auf dem Weg in den Urlaub.';
+        vue.dialogMessageButton = 'Start';
 	},
 	methods: {
 		messageClick : function () {
@@ -26,12 +27,20 @@ var dialog = {
 			case 'hello':
 				this.dialogStep = 'story';
 				this.dialogMessageHead = 'Es war einmal...';
-				this.dialogMessageBody = '... und dexwegen musst du uns helfen.';
+				this.dialogMessageBody = '... und deswegen musst du uns helfen.';
+                this.dialogMessageButton = '';
 				break;
 			case 'story':
+				this.dialogStep = 'control';
+				this.dialogMessageHead = 'Und so geht\'s';
+				this.dialogMessageBody = 'Mit den Tasten, ... mit dem Finger...';
+                this.dialogMessageButton = 'Jetzt spielen';
+				break;
+			case 'control':
 				this.dialogStep = 'chooseFigure';
-				this.dialogChoosePlayerHead = 'Wähle aus';
-				this.dialogChoosePlayerBody = 'Mit wem möchtest du spielen?';
+				this.dialogChoosePlayerHead = 'Auswahl des Charakters';
+				this.dialogChoosePlayerBody = 'Wähle den Zug aus, mit dem du fahren möchtest.';
+                this.dialogMessageButton = 'Los geht\'s';
 				break;
 			}
 		}
