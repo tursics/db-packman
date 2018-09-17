@@ -16,10 +16,14 @@
 <body>
 	<div id="app">
 		<div id="background"></div>
+		<div id="gameplay">
+			<canvas id="canvas" width="960" height="640">Dein Browser ist zu alt / You use an old browser.</canvas>
+		</div>
 		<div id="dialogMessage" class="dialog" v-show="dialogMessageVisible">
 			<h1>{{dialogMessageHead}}</h1>
 			<div>{{dialogMessageBody}}</div>
 			<button v-on:click="dialogMessageClick">Weiter</button>
+			<img v-on:click="dialogMessageClick">
 		</div>
 		<div id="dialogChoosePlayer" class="dialog" v-show="dialogChoosePlayerVisible">
 			<h1>{{dialogChoosePlayerHead}}</h1>

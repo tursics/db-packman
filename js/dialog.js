@@ -25,7 +25,7 @@ var dialog = {
 
 			switch (this.dialogStep) {
 			case 'start':
-					
+				this.dialogStep = 'hide';
 				break;
 			case 'start':
 				this.dialogStep = 'hello';
