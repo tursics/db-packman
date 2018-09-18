@@ -85,6 +85,7 @@ html.nickNachtzug div#background {
 
 #gameplay {
 	margin: 0 auto;
+	position: absolute;
 	width: 960px;
 }
 

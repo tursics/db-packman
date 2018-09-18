@@ -1,5 +1,5 @@
 /*jslint browser: true*/
-/*global */
+/*global game*/
 
 //-----------------------------------------------------------------------
 
@@ -26,6 +26,7 @@ var dialog = {
 			switch (this.dialogStep) {
 			case 'start':
 				this.dialogStep = 'hide';
+				game.start();
 				break;
 			case 'start':
 				this.dialogStep = 'hello';
