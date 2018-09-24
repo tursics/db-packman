@@ -36,7 +36,7 @@ var game = {
 
 				if (stage.doUpdate() !== false) {
 					stage.maps.forEach(function (map) {
-						if (!(frame % map.frames)) {
+						if (0 === (frame % map.frames)) {
 							map.times = frame / map.frames;
 						}
 						if (map.cache) {
@@ -54,7 +54,7 @@ var game = {
 						}
 					});
 
-					stage.items.forEach(function (item) {
+/*					stage.items.forEach(function (item) {
 						if (!(frame % item.frames)) {
 							item.times = frame / item.frames;
 						}
@@ -65,7 +65,7 @@ var game = {
 							item.doUpdate();
 						}
 						item.draw(that.context);
-					});
+					});*/
 				}
 
 				that.mainLoop = requestAnimationFrame(loop);
@@ -73,11 +73,13 @@ var game = {
 
 		that.mainLoop = requestAnimationFrame(loop);
 		app.gameplayVisible = true;
+		this.obj.style.display = 'block';
 	},
 	stop: function () {
 		'use strict';
 
 		this.gamePlayVisible = false;
+		this.obj.style.display = 'none';
 
 		if (this.mainLoop) {
 			cancelAnimationFrame(this.mainLoop);

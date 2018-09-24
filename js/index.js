@@ -25,7 +25,7 @@ var app = new Vue({
 		background.init(this);
 		dialog.init(this);
 		stage.init(this);
-		game.init(this, 'canvas');
+		game.init(this, 'gameCanvas');
 	},
 	methods: {
 		dialogMessageClick: dialog.methods.messageClick

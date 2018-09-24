@@ -14,11 +14,11 @@
 	<script src="lib/vue.js"></script>
 </head>
 <body>
+	<div id="gameplay" v-show="gameplayVisible">
+		<canvas id="gameCanvas" width="960" height="640">Dein Browser ist zu alt / You use an old browser.</canvas>
+	</div>
 	<div id="app">
 		<div id="background"></div>
-		<div id="gameplay" v-show="gameplayVisible">
-			<canvas id="canvas" width="960" height="640">Dein Browser ist zu alt / You use an old browser.</canvas>
-		</div>
 		<div id="dialogMessage" class="dialog" v-show="dialogMessageVisible">
 			<h1>{{dialogMessageHead}}</h1>
 			<div>{{dialogMessageBody}}</div>
