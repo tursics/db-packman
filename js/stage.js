@@ -11,9 +11,11 @@ var stage = {
 	STATUS_INTERNAL_ERROR: 4,
 	COS: [1, 0, -1, 0],
 	SIN: [0, 1, 0, -1],
+	COLOR: ['#F00', '#F93', '#0CF', '#F9C'],
 
 	obj: null,
 	status: this.STATUS_INACTIVE,
+	sprites: [],
 
 	init: function () {
 		'use strict';
@@ -32,16 +34,17 @@ var stage = {
 	doUpdate: function () {
 		'use strict';
 
-		var stage = this;
+		var stage = this,
+			map = this.maps[0];
 
 		if (stage.STATUS_NORMAL === stage.status) {
-			items.forEach(function (item) {
-				if (map && !map.get(item.coord.x, item.coord.y) && !map.get(player.coord.x, player.coord.y)) {
-					var dx = item.x - player.x;
-					var dy = item.y - player.y;
-					if (dx * dx + dy * dy < 750 && item.status != 4) {
-						if (item.status == 3) {
-							item.status = 4;
+			this.sprites.forEach(function (sprite) {
+				if (map && !map.get(sprite.coord.x, sprite.coord.y) && !map.get(player.coord.x, player.coord.y)) {
+					var dx = sprite.x - player.x;
+					var dy = sprite.y - player.y;
+					if (dx * dx + dy * dy < 750 && sprite.status != 4) {
+						if (sprite.status == 3) {
+							sprite.status = 4;
 							_SCORE += 10;
 						} else {
 							stage.status = 3;
@@ -51,9 +54,9 @@ var stage = {
 				}
 			});
 
-			if (JSON.stringify(beans.data).indexOf(0) < 0) {
+/*			if (JSON.stringify(beans.data).indexOf(0) < 0) {
 				game.nextStage();
-			}
+			}*/
 		}
 
 		return true;
@@ -158,8 +161,8 @@ var stage = {
 							default:
 								var dist = this.size / 2;
 
-								moving.forEach(function (item, index) {
-									if (item) {
+								moving.forEach(function (sprite, index) {
+									if (sprite) {
 										context.beginPath();
 										context.moveTo(pos.x, pos.y);
 										context.lineTo(pos.x - stage.COS[index] * dist, pos.y - stage.SIN[index] * dist);

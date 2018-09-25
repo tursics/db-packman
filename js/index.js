@@ -1,5 +1,5 @@
 /*jslint browser: true*/
-/*global Vue,document,background,dialog,game,stage*/
+/*global Vue,document,background,dialog,game,stage,player,enemy*/
 
 //-----------------------------------------------------------------------
 
@@ -24,6 +24,8 @@ var app = new Vue({
 
 		background.init(this);
 		dialog.init(this);
+		enemy.init(this, 4);
+		player.init(this);
 		stage.init(this);
 		game.init(this, 'gameCanvas');
 	},
